@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* ────────────────────────────────────────────────────────────────
+   Xeno CRM Design Tokens — Cohere 2026 stark system
+   Canvas: #ffffff (stark white) | Soft Stone: #eeece7 | Accent: #ff7759 (coral)
+   Primary: #17171c | Ink: #212121
+   ──────────────────────────────────────────────────────────────── */
+:root {
+  /* Surfaces */
+  --canvas:            #ffffff;
+  --canvas-deep:       #eeece7;
+  --surface:           #ffffff;
+  --surface-2:         #eeece7;
+  --surface-3:         #edfce9; /* Pale green wash */
+  --hairline:          #d9d9dd;
+  --hairline-strong:   #75758a;
+
+  /* Text */
+  --ink:               #212121;
+  --ink-body:          #616161;
+  --ink-muted:         #93939f;
+  --on-primary:        #ffffff;
+
+  /* Brand */
+  --primary:           #17171c;
+  --primary-hover:     #000000;
+  --accent:            #5956E9;
+  --accent-hover:      #8C8AFF;
+
+  /* Semantic */
+  --success:           #003c33; /* Deep Green */
+  --success-soft:      #edfce9;
+  --warning:           #5956E9;
+  --warning-soft:      #8C8AFF;
+  --error:             #b30000;
+  --error-soft:        #f1f5ff;
+  --opened-fg:         #1863dc;
+  --opened-bg:         #f1f5ff;
+  --clicked-fg:        #9b60aa;
+  --clicked-bg:        #f5f3ff;
+  --link:              #1863dc;
+
+  /* Typography */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans:  'Inter', sans-serif;
+  --font-mono:  'Space Mono', monospace;
+
+  /* Spacing */
+  --space-xxs:     2px;
+  --space-xs:      6px;
+  --space-sm:      8px;
+  --space-md:      12px;
+  --space-lg:      16px;
+  --space-xl:      24px;
+  --space-2xl:     32px;
+  --space-3xl:     48px;
+  --space-section: 80px;
+
+  /* Radius */
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r-md:   16px;
+  --r-lg:   22px;
+  --r-xl:   30px;
+  --r-pill: 32px;
+  --r-full: 9999px;
+
+  /* Shadows — Cohere is flat, so we use minimal/subtle rules and thin outlines */
+  --shadow-1: 0 0 0 1px var(--hairline);
+  --shadow-2: 0 1px 2px rgba(0,0,0,0.05), 0 0 0 1px var(--hairline);
+  --shadow-3: 0 4px 12px rgba(0,0,0,0.03), 0 0 0 1px var(--hairline);
+  --shadow-4: 0 8px 24px rgba(0,0,0,0.04), 0 0 0 1px var(--hairline);
+  --shadow-5: 0 12px 32px rgba(0,0,0,0.05), 0 0 0 1px var(--hairline);
+}
+
+@theme inline {
+  --color-canvas:          var(--canvas);
+  --color-canvas-deep:     var(--canvas-deep);
+  --color-surface:         var(--surface);
+  --color-surface-2:       var(--surface-2);
+  --color-surface-3:       var(--surface-3);
+  --color-hairline:        var(--hairline);
+  --color-hairline-strong: var(--hairline-strong);
+  --color-ink:             var(--ink);
+  --color-ink-body:        var(--ink-body);
+  --color-ink-muted:       var(--ink-muted);
+  --color-on-primary:      var(--on-primary);
+  --color-primary:         var(--primary);
+  --color-accent:          var(--accent);
+  --color-accent-hover:    var(--accent-hover);
+  --color-success:         var(--success);
+  --color-success-soft:    var(--success-soft);
+  --color-warning:         var(--warning);
+  --color-warning-soft:    var(--warning-soft);
+  --color-error:           var(--error);
+  --color-error-soft:      var(--error-soft);
+  --color-opened-fg:       var(--opened-fg);
+  --color-opened-bg:       var(--opened-bg);
+  --color-clicked-fg:      var(--clicked-fg);
+  --color-clicked-bg:      var(--clicked-bg);
+  --color-link:            var(--link);
+  --font-sans:             var(--font-sans);
+  --font-mono:             var(--font-mono);
+}
+
+/* ── Typography scale ── */
+@utility text-display-xl   { font-size:48px; line-height:52px; font-weight:600; letter-spacing:-2px; }
+@utility text-display-lg   { font-size:32px; line-height:38px; font-weight:600; letter-spacing:-1px; }
+@utility text-display-md   { font-size:24px; line-height:30px; font-weight:600; letter-spacing:-0.5px; }
+@utility text-display-sm   { font-size:20px; line-height:26px; font-weight:600; letter-spacing:-0.3px; }
+@utility text-body-lg      { font-size:18px; line-height:28px; font-weight:400; }
+@utility text-body         { font-size:15px; line-height:22px; font-weight:400; }
+@utility text-body-strong  { font-size:15px; line-height:22px; font-weight:500; }
+@utility text-body-sm      { font-size:13px; line-height:18px; font-weight:400; }
+@utility text-body-sm-strong { font-size:13px; line-height:18px; font-weight:500; }
+@utility text-caption      { font-size:11px; line-height:16px; font-weight:400; letter-spacing:0.2px; }
+@utility text-caption-mono { font-size:11px; line-height:16px; font-weight:400; letter-spacing:0.5px; font-family:var(--font-mono); }
+@utility text-button       { font-size:13px; line-height:18px; font-weight:600; letter-spacing:0.1px; }
+@utility text-button-lg    { font-size:15px; line-height:20px; font-weight:600; letter-spacing:0.1px; }
+
+/* ── Shadows ── */
+@utility shadow-1 { box-shadow: var(--shadow-1); }
+@utility shadow-2 { box-shadow: var(--shadow-2); }
+@utility shadow-3 { box-shadow: var(--shadow-3); }
+@utility shadow-4 { box-shadow: var(--shadow-4); }
+@utility shadow-5 { box-shadow: var(--shadow-5); }
+
+/* ── Radius shortcuts ── */
+@utility rounded-pill { border-radius: var(--r-pill); }
+@utility rounded-xs   { border-radius: var(--r-xs); }
+@utility rounded-sm   { border-radius: var(--r-sm); }
+@utility rounded-md   { border-radius: var(--r-md); }
+@utility rounded-lg   { border-radius: var(--r-lg); }
+@utility rounded-xl   { border-radius: var(--r-xl); }
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scroll behaviour ── */
+html { scroll-behavior: smooth; }
+
+/* ── Animations ── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}

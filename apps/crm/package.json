@@ -1,0 +1,53 @@
+{
+  "name": "crm",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^3.0.81",
+    "@ai-sdk/groq": "^3.0.41",
+    "@ai-sdk/react": "^3.0.204",
+    "@auth/prisma-adapter": "^2.11.2",
+    "@google/genai": "^2.8.0",
+    "@prisma/client": "5.22.0",
+    "@radix-ui/react-slot": "^1.2.5",
+    "ai": "^6.0.202",
+    "bcryptjs": "^3.0.3",
+    "bullmq": "^5.78.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dotenv": "^17.4.2",
+    "framer-motion": "^12.40.0",
+    "gsap": "^3.15.0",
+    "ioredis": "^5.11.1",
+    "lucide-react": "^1.17.0",
+    "next": "16.2.9",
+    "next-auth": "^4.24.14",
+    "papaparse": "^5.5.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "recharts": "^3.8.1",
+    "sharp": "^0.35.1",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "prisma": "5.22.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
